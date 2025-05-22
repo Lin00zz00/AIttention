@@ -36,8 +36,16 @@ Inspired by the film *Whalebone*, the project reflects on themes of **digital li
 
 ## 📖 License
 
-MIT License (or insert your own if different)
+MIT License
 
 ---
 
 ✨ *This project reflects on how AI may accompany, distort, and reshape our perceptions—quietly yet persistently, like the bones of something once alive.* 🐋
+
+## 🙏 Special Thanks
+
+- Botao Amber Hu
+- Rungu Rem Lin
+- Tongzhou Yu
+- Yongru Lu
+- ChatGPT
