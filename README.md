@@ -1,7 +1,9 @@
 # AIttention
+![Logo](logo01.png)
+
 Click here → https://lin00zz00.github.io/AIttention/
 
-# Whalebone Attention AR Installation
+# AItention AR Installation
 
 An interactive AR installation exploring AI attention, human gaze, and spatial memory through the metaphor of a digital whale skeleton.
 
