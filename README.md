@@ -1,2 +1,2 @@
 # AIttention
-an AR installation
+https://lin00zz00.github.io/AItention/index.html
