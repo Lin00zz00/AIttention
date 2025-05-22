@@ -34,15 +34,6 @@ Inspired by the film *Whalebone*, the project reflects on themes of **digital li
    - These particles **accumulate and distort** the skeleton mesh
 4. The whale gradually **loses its original form**, symbolizing how AI reshapes content through human attention.
 
-## 🧪 Exhibition & Feedback
-
-- **Presented at**: [insert event name here]
-- **User Study**: Observed behavior changes include:
-  - Increased stillness, extended gaze duration
-  - Path deviation (users walking around the skeleton)
-  - Reflective commentary on attention and AI presence
-
-## 📂 Structure
 ## 📖 License
 
 MIT License (or insert your own if different)
