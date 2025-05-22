@@ -1,6 +1,4 @@
 # AIttention
-![Logo](logo01.png)
-
 Click here → https://lin00zz00.github.io/AIttention/
 
 # AItention AR Installation
