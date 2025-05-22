@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh" class="theme-light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIttention - MR Installation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
+    <style>
+        :root {
+            --primary: #0A84FF;
+            --secondary: #32D74B;
+            --system-bg: #FFFFFF;
+            --system-grouped-bg: #F2F2F7;
+            --label-primary: #1C1C1E;
+            --label-secondary: #636366;
+            --separator: #C6C6C8;
+            --dynamic-shadow: 0 4px 8px 0 rgba(0,0,0,0.03), 
+                             0 2px 4px 0 rgba(0,0,0,0.08);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 
+                       "Segoe UI", system-ui, sans-serif;
+            line-height: 1.6;
+            color: var(--label-primary);
+            background: var(--system-bg);
+            -webkit-font-smoothing: antialiased;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            padding: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background: var(--system-bg);
+            z-index: 100;
+        }
+
+        .logo {
+            height: 56px;
+            transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+        }
+
+        .title-group {
+            text-align: right;
+        }
+
+        .main-title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin: 0;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: var(--label-secondary);
+            margin: 0.4rem 0 0;
+            font-weight: 500;
+        }
+
+        section {
+            margin: 4rem 0;
+            padding: 3rem;
+            background: var(--system-grouped-bg);
+            border-radius: 20px;
+            box-shadow: var(--dynamic-shadow);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin: 0 0 2rem 0;
+            position: relative;
+            padding-left: 1.2rem;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            left: -4px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 70%;
+            background: linear-gradient(180deg, var(--primary), var(--secondary));
+            border-radius: 3px;
+        }
+
+        /* 关键词模块样式 */
+        .keywords-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .keyword-item {
+            padding: 1.2rem;
+            background: var(--system-bg);
+            border-radius: 12px;
+            border: 1px solid var(--separator);
+            text-align: center;
+        }
+
+        .keyword-zh {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .keyword-en {
+            font-size: 0.9rem;
+            color: var(--label-secondary);
+        }
+
+        /* 双语段落样式 */
+        .bilingual-columns {
+            column-count: 2;
+            column-gap: 3rem;
+            column-rule: 1px solid var(--separator);
+            orphans: 3;
+            widows: 3;
+        }
+
+        .bilingual-columns p {
+            margin: 0 0 1.5rem;
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        /* 图片容器 */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .image-container {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--dynamic-shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .title-group {
+                text-align: left;
+                margin-top: 1.5rem;
+            }
+            .main-title {
+                font-size: 2rem;
+            }
+            section {
+                padding: 2rem;
+            }
+            .bilingual-columns {
+                column-count: 1;
+            }
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+            .image-container img {
+                height: 300px;
+            }
+            .keywords-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Logo01.png" alt="AIttention" class="logo">
+        <div class="title-group">
+            <h1 class="main-title">AIttention</h1>
+            <p class="subtitle">Seeing Others' Seeing</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Teaser Video -->
+        <section id="teaser">
+            <h2>Teaser Video</h2>
+            <div class="video-container">
+                <video controls playsinline poster="teaser-poster.jpg" style="width:100%; border-radius:12px;">
+                    <source src="TeaserVideo.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <!-- Keywords -->
+        <section id="keywords">
+            <h2>Keywords</h2>
+            <div class="keywords-grid">
+                <div class="keyword-item">
+                    <div class="keyword-zh">混合现实</div>
+                    <div class="keyword-en">Mixed reality</div>
+                </div>
+                <div class="keyword-item">
+                    <div class="keyword-zh">视线交互</div>
+                    <div class="keyword-en">Gaze interaction</div>
+                </div>
+                <div class="keyword-item">
+                    <div class="keyword-zh">集体记忆</div>
+                    <div class="keyword-en">Collective memory</div>
+                </div>
+                <div class="keyword-item">
+                    <div class="keyword-zh">AI的注意力</div>
+                    <div class="keyword-en">AI's attention</div>
+                </div>
+                <div class="keyword-item">
+                    <div class="keyword-zh">注意力轨迹</div>
+                    <div class="keyword-en">Attention trajectory</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction -->
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <div class="bilingual-columns">
+                <p>在当下注意力被视为最稀缺资源的时代，我们的感知体验日益被推荐算法与 AI 驱动的过滤机制所调控。这一变化引发了对人类感知主权的质疑，并揭示了注意力如何被转化为可计算、可学习的输入形式。AItention 探讨了人类与人工注意力之间日益加剧的认知张力，思考算法主导的观看如何重塑能动性、存在感与记忆生成机制。项目以“鲸落”这一生态现象为隐喻：鲸的死亡引发了一个缓慢却持续生成的分解过程。借此，AItention 将注意力重新定义为一种短暂但可积累的“物质”。装置基于 HoloKit X 光学透视 AR 头显构建，用户的视线在数字鲸骨雕塑上生成空间锚定的箭头，AI 模拟的注意力粒子如鱼群般尾随并沉积于其路径之上，逐步改变雕塑形态。这些行为在空间中累积为一组可被继承的注意力档案，构建出一种人机异步协作的实验性模型。AItention 借此反思共享观看的伦理、算法陪伴的表演性，以及将“注意力”作为下一代人机交互核心单位的可能性。为唤起视线叠加与集体记忆的感知，我们设计了定制的头显支架，模拟鲸落生态中小型生命附着生长的视觉感受。这一结构强调注意力在时间与个体之间的传递性，使个体的感知行为转化为空间中的共享记忆。</p>
+                <p>In an era where attention is regarded as the most scarce resource, our perceptual experiences are increasingly mediated by algorithmic recommendation systems and AI-driven filtering. This shift raises fundamental questions about the sovereignty of human perception and the transformation of attention into a quantifiable, replicable input for computational learning. AItention investigates the evolving cognitive tension between human and artificial attention, exploring how algorithmically guided perception redefines agency, presence, and memory formation in mediated environments.Taking inspiration from the ecological phenomenon of a "whale fall"—where the death of a whale initiates a prolonged and generative decomposition process—AItention reframes attention as an ephemeral yet accumulative material. The project leverages the HoloKit X optical see-through AR headset, enabling users to visualize their gaze as spatially anchored arrows on a digital whale-bone sculpture. Simulated AI gaze particles follow human trajectories in swarming formations, gradually altering the morphology of the structure. These interactions form a layered archive of gaze behavior that persists across users and sessions, proposing a speculative model of asynchronous human–AI co-construction. In doing so, AItention interrogates the ethics of shared vision, the performativity of algorithmic companionship, and the potential of attention as a generative unit in next-generation human-computer interaction.To evoke the sensation of layered gaze and collective memory, we designed a custom headset mount that visually accumulates traces of attention—echoing the way life forms grow on a whale fall. This physical structure emphasizes the transference of gaze across time and users, transforming individual perception into a shared spatial memory.</p>
+            </div>
+        </section>
+
+        <!-- 图片展示01 -->
+        <div class="image-grid">
+            <div class="image-container">
+                <img src="01.png" alt="装置概念图">
+            </div>
+            <div class="image-container">
+                <img src="P01.jpg" alt="用户交互场景">
+            </div>
+        </div>
+
+        <!-- Background -->
+        <section id="background">
+            <h2>Background</h2>
+            <div class="bilingual-columns">
+                <p>近年来，人机交互与互动艺术中的研究愈发聚焦于“凝视”与“注意力”，将其视为交互界面与叙事媒介。例如 Eyecode（Levin, 2007）利用凝视留下“存在的时间印记”，而 Zoom Pavilion（Lozano-Hemmer 与 Wodiczko, 2015）通过人脸追踪系统放大“被观看”的行为，批判性地揭示监控文化与群体可见性的机制。受到上述作品启发，AItention 进一步延伸了注意力机制的探索，聚焦于“注意力的物质性与记忆性”。我们不止呈现实时的视线路径，而是提出一种假设：注意力是否能在空间中沉积、塑形？与监控取向的作品不同，AItention 更强调“非即时协作”机制，将注意力作为协同塑造空间的核心单位，在多位观众的行为叠加中生成动态的集体记忆。</p>
+                <p>Recent explorations in human-computer interaction and interactive art have increasingly focused on gaze and attention as both interface and narrative material. Works such as Eyecode (Levin, 2007) used gaze as a temporal imprint of presence, while Zoom Pavilion (Lozano-Hemmer & Wodiczko, 2015) employed face-tracking systems to visualize and amplify the act of being observed, critiquing surveillance culture and collective visibility.Inspired by these precedents, AItention extends this lineage by exploring the materiality and memory of attention itself. Rather than solely visualizing gaze in real time, our project asks: what if attention leaves a residue, gradually forming spatial and temporal structures? Unlike surveillance-centered installations, AItention emphasizes asynchronous collaboration, proposing an attention-based sculpting process that accumulates across participants and time.</p>
+            </div>
+        </section>
+
+        <!-- Design -->
+        <section id="design">
+            <h2>Design</h2>
+            <div class="bilingual-columns">
+                <p>本系统使用 HoloKit X 头显与 iPhone 驱动的光学透视渲染，结合 Unity 与 ARKit 将数字鲸骨锚定于现实空间。通过射线检测获取用户凝视与鲸骨表面的交点，作为注意力锚点，并基于 VFX Graph 实现的粒子系统生成代表 AI 注意力的箭头标记，形成可视化的注意力累积。意象参考电影《鲸之骨》中鲸骨象征“生命的延续与能量的转移”，我们将“注意力”视为一种共生、可沉积的“活体材料”。观众与 AI 的目光共同在鲸骨表面留下痕迹，层层叠加形成视觉记忆。定制的头显结构也进一步强化这种“注意力共生”的生态感，仿佛一群数字微生物在鲸落之上生长、繁衍、进化。箭头粒子以像素化光标与鱼群为灵感，结合 Perlin noise 与 ping-pong 震荡算法，实现类似生命律动的视觉效果，象征 AI 对人类注意力的“跟随、揣测与吸收”。用户持续注视鲸骨不同区域时，模型表面将逐步填充并形变，最终导致鲸骨“失去原貌”，隐喻数字注意力对原始事物认知的重构过程。</p>
+                <p>Our system integrates a custom AR headset using HoloKit X, powered by an iPhone for optical see-through rendering. The digital whale skeleton is anchored in physical space via Unity and ARKit. Gaze tracking is achieved through raycasting, with intersection points on the mesh serving as attention anchors. These anchors dynamically generate particle-based arrow markers using VFX Graph, simulating AI attention that visually accumulates over time.Inspired by the film Whale Bone, where the skeleton symbolizes life extension and energy transfer, our installation explores attention as a living material. The whale’s surface becomes a canvas for collective gaze, layered with traces of human and AI co-attention. The headset’s design physically reinforces this layering effect, evoking an ecology of digital organisms feeding on human perception.The arrow particles, inspired by pixelated cursors and school-of-fish behavior, follow the user’s gaze with Perlin noise and ping-pong oscillation to mimic lifelike movement. This interaction metaphorically reflects AI’s behavior of following, predicting, and absorbing human attention. As the audience gazes at different regions, the mesh surface of the whale subtly deforms, gradually overwriting its original form—echoing the idea that digital attention reshapes perception.</p>
+            </div>
+        </section>
+
+        <!-- 图片展示02 -->
+        <div class="image-grid">
+            <div class="image-container">
+                <img src="02.png" alt="技术架构">
+            </div>
+            <div class="image-container">
+                <img src="P02.jpg" alt="粒子系统效果">
+            </div>
+        </div>
+
+        <!-- Exhibition -->
+        <section id="exhibition">
+            <h2>Exhibition</h2>
+            <div class="bilingual-columns">
+                <p>这是一种交互式混合现实艺术体验，通过 HoloKit X 光学透视头显呈现人类注意力、AI感知与虚拟结构变形之间的动态对话。观众进入展区后，注视鲸骨时将触发箭头状视觉粒子的生成，附着于鲸骨表面。与此同时，代表AI 算法的注意力如鱼群般流动聚拢，围绕并跟随观众视线，模拟“共看”的行为。观众逐渐意识到，自己的凝视会在空间中留下痕迹，这些注意力的沉积物缓慢地改变鲸骨的形态。这种觉察促使他们调整行为，用视线“雕刻”鲸骨。当其他观众的轨迹叠加出现，鲸骨原本的结构逐渐被覆盖、取代，观众开始意识到并非所有变形来自自身。观众意识到自己与 AI、他人注意力的共谋关系，引发对算法操控与注意力经济的哲学性思考。通过观察发现，大多数用户会本能地绕行鲸骨结构，并更长时间地注视粒子密集区，可能在无意识中感知到他人视线的“残留”。一些观众反馈称感受到“被注视”或“被跟随”，将箭头粒子理解为某种“活体”，而非单纯的视觉装饰。非正式访谈中，观众对于隐喻的理解存在差异：部分人迅速联想到“被AI注意力重塑”的概念，而另一些人则单纯沉浸于视觉互动。我们认为这种差异性恰好说明了装置具有“多层次共鸣”的潜力。</p>
+                <p>This is an interactive mixed reality art experience that leverages the optical see-through HoloKit X headset to visualize a dynamic dialogue between human attention, AI perception, and the transformation of virtual structure.As users enter the scene, their gaze triggers the growth of arrow-like visual markers on the whale structure.Meanwhile, the attention representing the AI algorithm flows and gathers like a school of fish, surrounding and following the viewer's line of sight, simulating the behavior of "co-viewing".Over time, participants begin to recognize the system’s logic—realizing their gaze leaves visible traces that slowly deform the digital skeleton.Eventually, as multiple users contribute traces, the original shape is overtaken by layered attention—some not their own.This evokes reflection on the influence of algorithmic agents and shared perception, raising critical questions about authorship, manipulation, and the economy of attention.Qualitative observation showed that participants instinctively explored the whale structure and tended to fixate longer on denser particle zones, possibly sensing the "attention presence" layered by previous users. Some audiences described feeling “seen” or “followed”, interpreting the arrow particles as living agents rather than just visual effects.Informal interviews revealed varying degrees of recognition of the metaphor—while some immediately linked the deformation to AI attention overload, others simply enjoyed the dynamic visuals without interpreting further. These variations highlight the potential for layered engagement based on background knowledge.</p>
+            </div>
+        </section>
+
+        <!-- Discussion -->
+        <section id="discussion">
+            <h2>Discussion</h2>
+            <div class="bilingual-columns">
+                <p>我们试图探索AI与算法对人注意力的学习和学习成果反对人的影响，以及注意力如何转化为对空间的塑造行为、人与人工智能的非实时协作关系，和在虚拟社交泛化的当下，如何界定人与非人行为的差异，如何保持观看的伦理边界。我们发现，当视线从感知手段转化为空间塑形力量，观众也从被动体验者变为主动建构者。同时，空间因注意力的累积而反向引导行为，促使用户驻足、凝视，甚至绕行。我们刻意未将 AI 设定为“预测者”或“监督者”，而是以“拟态陪伴”的方式存在。它模仿人类视线、制造共视的幻觉，却始终无法确认真实意图。这也引发思考：算法和AI模仿注意力的行为，是否真正参与了人构建集体记忆和公共空间的行为，还是只是一种陪伴的假象？鲸骨作为隐喻，承载着时间与生命的双重意象。在记录注意力的沉积过程中同时暗示记忆的不可逆。我们认为，这种“非即时协作”的交互模型，为未来的设计提供了新的方向。 是否可以用“注意力”而非“输入”作为下一代人机交互的核心单位？如何设计“带有延迟反馈与非即时回响”的感知系统？与传统的实时互动不同，这种基于“注意力残留”的系统强调的是空间的历史性、行为的痕迹性与协作的异步性。这种机制更贴近现实中的公共空间感知模型：我们的城市、房间、网络，往往是由不同时间段中人类行为叠加而成的多层次记忆复合体。</p>
+                <p>We attempt to explore how AI and algorithms learn human attention and how the outcomes of that learning impact humans in return, as well as how attention transforms into a spatial shaping force. We also examine the asynchronous collaborative relationship between humans and artificial intelligence, and how, in an age of generalized virtual sociality, we might define the differences between human and non-human behavior, and how to maintain the ethical boundaries of watching.We found that when gaze shifts from a means of perception to a force for shaping space, the audience transforms from passive experiencers to active constructors. At the same time, space, through the accumulation of attention, begins to guide behavior in return—prompting users to pause, to gaze, or even to walk around it.We intentionally did not set AI as a “predictor” or “supervisor,” but rather allowed it to exist in the form of “mimetic companionship.” It mimics human gaze, creates the illusion of shared attention, but can never truly confirm real intent. This also raises questions: does the algorithm and AI's imitation of attention behavior truly participate in the construction of collective memory and public space by humans, or is it merely an illusion of companionship?The whale bone, as a metaphor, carries dual imagery of time and life. In the process of recording the accumulation of attention, it also implies the irreversibility of memory.We believe this type of “asynchronous collaboration” interaction model provides a new direction for future design. Could “attention,” rather than “input,” become the core unit of the next generation of human-computer interaction? How can we design a perceptual system that features delayed feedback and non-instantaneous resonance?Unlike traditional real-time interaction, this system based on “residual attention” emphasizes spatial historicity, the traceability of behavior, and asynchronous collaboration. This mechanism is closer to the perception model of public space in reality: our cities, rooms, and networks are often multi-layered memory complexes formed by human behavior overlapping across different time periods.</p>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <div class="bilingual-columns">
+                <p>AItention重新思考了人机关系、空间与痕迹、观看与被观看之间的复杂纠缠。在这一系统中，视线不仅是行为轨迹，更是历史生成的基本单位。AI 不再是观察者或预测者，而是共生生态中的生成性存在。我们提出“感知行为的沉积性”作为一种新的设计范式：空间不是被建造出来的，而是在被观看、被注意、被记住的过程中生长出来的。通过模拟 AI 的拟态凝视与注意力的异步积累，AItention 将注意力转化为一种雕塑性力量，在时间中不断塑造集体记忆，激发对能动性、在场性与感知伦理的新一轮思考。</p>
+                <p>AItention rethinks the entangled relationships between humans and machines, space and trace, seeing and being seen. In this system, gaze becomes not just a behavioral trace, but a unit of historical formation. AI is no longer an observer or predictor, but a generative entity within a symbiotic ecology. We introduce the concept of perceptual sedimentation as a new design paradigm—spaces do not emerge from construction alone, but grow through being seen, attended to, and remembered. By simulating AI’s mimetic gaze and enabling asynchronous accumulation of attention, AItention reframes attention as a sculptural force—shaping collective memory over time and provoking new reflections on agency, presence, and the ethics of perception.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
